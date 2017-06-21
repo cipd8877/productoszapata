@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Andia - Responsive Agency Template</title>
+        <title>Zapata - 100% Mexicanos</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
@@ -30,10 +30,10 @@
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">-->
 
     </head>
 
@@ -43,71 +43,87 @@
 		<nav class="navbar" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+					<button type="button"  class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Andia - a super cool design agency...</a>
+					<a class="navbar-brand"  href="index.html"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown active">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-left" role="menu">
-								<li><a href="index.html">Home</a></li>
-								<li class="active"><a href="index-2.html">Home 2</a></li>
-							</ul>
-						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>Portfolio</a>
-						</li>
-						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>Services</a>
-						</li>
-						<li>
-							<a href="about.html"><i class="fa fa-user"></i><br>About</a>
-						</li>
-						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-paperclip"></i><br>Pages <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="pricing-tables.html">Pricing tables</a></li>
-							</ul>
+							<a href="index.html"><i class="fa fa-home"></i><br>Inicio</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-        <!-- Slider 2 -->
-        <div class="slider-2-container">
+        <!-- Slider -->
+        <div class="slider-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 slider-2-text wow fadeInUp">
-                        <h1>We are <span class="violet">Andia</span> a super cool design agency.</h1>
-	            		<p>We design beautiful websites, logos and prints. Your project is safe with us.</p>
+                    <div class="col-sm-10 col-sm-offset-1 slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <?php
+                                //Datos de Conexión
+                                $servername = "localhost";
+                                $username = "root";
+                                $password = "";
+                                $dbname = "zapata";
+                                
+                                // Create connection
+                                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+								// Check connection
+								if (!$conn) {
+									die("Connection failed: " . mysqli_connect_error());
+								}
+								$sql = "SELECT productImage FROM productos";
+                                if(!isset($_SESSION['productos'])){
+								   $result = $conn->query($sql);
+								   session_start();
+								   $_SESSION['productos']=$row = $result->fetch_assoc();
+
+                                } else {
+                                    $result = $_SESSION['productos'];
+                                }
+                                while($data = $result->fetch_assoc()){
+                                    echo '<li data-thumb="assets/img/slider/'.$data['productImage'].'">
+                                    <img src="assets/img/slider/'.$data['productImage'].'">
+                                    <div class="flex-caption">
+                                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                                    </div>
+                                </li>';
+                                }
+                                ?>
+                                
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Presentation -->
+        <div class="presentation-container">
+        	<div class="container">
+        		<div class="row">
+	        		<div class="col-sm-12 wow fadeInLeftBig">
+	            		<h1>We are <span class="violet">Andia</span>, a super cool design agency.</h1>
+	            		<p>We design beautiful websites, logos and prints. Your project is safe with us.</p>
+	            	</div>
+            	</div>
+        	</div>
+        </div>
+
         <!-- Services -->
         <div class="services-container">
 	        <div class="container">
-	        	<div class="row">
-		            <div class="col-sm-12 services-title wow fadeIn">
-		                <h2>Our Services</h2>
-		            </div>
-	            </div>
 	            <div class="row">
 	            	<div class="col-sm-3">
 		                <div class="service wow fadeInUp">
@@ -293,42 +309,23 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 footer-box wow fadeInUp">
-                        <h4>About Us</h4>
+                    <div class="col-sm-4 footer-box wow fadeInUp">
+                        <h4>Acerca de </h4>
                         <div class="footer-box-text">
 	                        <p>
-	                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-	                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+	                        	Zapata es una empresa 100% Mexicana, que ofrece diferentes productos textiles, artesanías y Mariachi.
 	                        </p>
-	                        <p><a href="about.html">Read more...</a></p>
                         </div>
                     </div>
-                    <div class="col-sm-3 footer-box wow fadeInDown">
-                        <h4>Email Updates</h4>
-                        <div class="footer-box-text footer-box-text-subscribe">
-                        	<p>Enter your email and you'll be one of the first to get new updates:</p>
-                        	<form role="form" action="assets/subscribe.php" method="post">
-		                    	<div class="form-group">
-		                    		<label class="sr-only" for="subscribe-email">Email address</label>
-		                        	<input type="text" name="email" placeholder="Email..." class="subscribe-email" id="subscribe-email">
-		                        </div>
-		                        <button type="submit" class="btn">Subscribe</button>
-		                    </form>
-		                    <p class="success-message"></p>
-		                    <p class="error-message"></p>
-                        </div>
+                    <div class="col-sm-4 footer-box wow fadeInDown">
+            
                     </div>
-                    <div class="col-sm-3 footer-box wow fadeInUp">
-                        <h4>Flickr Photos</h4>
-                        <div class="footer-box-text flickr-feed"></div>
-                    </div>
-                    <div class="col-sm-3 footer-box wow fadeInDown">
-                        <h4>Contact Us</h4>
+                    <div class="col-sm-4 footer-box wow fadeInDown">
+                        <h4>Contáctanos</h4>
                         <div class="footer-box-text footer-box-text-contact">
-	                        <p><i class="fa fa-map-marker"></i> Address: Via Principe Amedeo 9, 10100, Torino, TO, Italy</p>
-	                        <p><i class="fa fa-phone"></i> Phone: 0039 333 12 68 347</p>
-	                        <p><i class="fa fa-user"></i> Skype: Andia_Agency</p>
-	                        <p><i class="fa fa-envelope"></i> Email: <a href="">contact@andia.co.uk</a></p>
+	                        <p><i class="fa fa-phone"></i> Phone: +971 56 494 4632</p>
+                            <p><i class="fa fa-phone"></i> Phone: +52 1 33 14465437</p>
+	                        <p><i class="fa fa-envelope"></i> Email: <a href="">ventas@productoszapata.com.mx</a></p>
                         </div>
                     </div>
                 </div>
