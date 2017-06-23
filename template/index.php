@@ -99,14 +99,7 @@
 									die("Connection failed: " . mysqli_connect_error());
 								}
 								$sql = "SELECT productImage FROM productos";
-                                if(!isset($_SESSION['productos'])){
-								   $result = $conn->query($sql);
-								   session_start();
-								   $_SESSION['productos']=$row = $result->fetch_assoc();
-
-                                } else {
-                                    $result = $_SESSION['productos'];
-                                }
+								$result = $conn->query($sql);
                                 while($data = $result->fetch_assoc()){
 								    echo '<div class="col-sm-3"><div class="crop">
 						<div class="portfolio-gallery-item">
