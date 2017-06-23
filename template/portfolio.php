@@ -53,13 +53,13 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand sr-only" href="index.html">
-						<h1><img class="img-responsive" src="assets/images/logo.png" alt="logo"></h1>
+						<h1><img class="img-responsive" src="assets/images/logo190x210.png" alt="logo"></h1>
 					</a>                    
 				</div>
 				<div class="header-logo hidden-phone text-center">
 					<h1>
 						<a class="navbar-brand" href="index.html">
-							<img class="img-responsive" src="assets/images/logo.png" alt="logo">
+							<img class="img-responsive" src="assets/images/logo190x210.png" alt="logo">
 						</a> 
 					</h1>
 				</div>
