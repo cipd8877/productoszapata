@@ -1,3 +1,0 @@
-# productoszapata
-
-Copyright Productos Zapata

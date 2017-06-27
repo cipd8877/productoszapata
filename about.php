@@ -1,4 +1,3 @@
-<?php session_start() ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/presets/preset1.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
 	.crop{
  float:left;
@@ -35,9 +32,7 @@
  clip:rect(20px 290px 200px 20px);/* Agujero rectángulo de medida específica */
  }
 	</style>
-    
-    
-<meta property="og:title" content="Zapata" />
+    <meta property="og:title" content="Zapata" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.productoszapata.com.mx/" />
 <meta property="og:image" content="http://www.productoszapata.com.mx/img/logos/zapataB.png" />
@@ -87,47 +82,59 @@
 	</header>
 	<!-- Header End -->
 	
-	<!-- Portfolio Start -->
-	<section id="portfolio">
+	<!-- About Start -->
+	<section id="about">
 		<div class="container">
 			<div class="row">
 				<div class="title text-center col-sm-12">
-					<h2>Nuestros Productos</h2>
+					<h2>Nuestro Equipo</h2>
 				</div>
 			</div>
-			<div class="row">
-                <center></center>
-				<div class="portfolio-gallery">
-                    <?php
-                                include_once "util/con.php";
-                                // Create connection
-                                $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-								// Check connection
-								if (!$conn) {
-									die("Connection failed: " . mysqli_connect_error());
-								}
-								$sql = "SELECT productImage FROM productos";
-								$result = $conn->query($sql);
-                                while($data = $result->fetch_assoc()){
-								    echo '<div class="col-sm-3"><div class="crop">
-						<div class="portfolio-gallery-item">
-							<img class="img-responsive" src="assets/images/slider/'.$data['productImage'].'" alt="Image1">
-							<a href="assets/images/slider/'.$data['productImage'].'" rel="prettyPhoto[gallery]">
-								<i class="fa fa-search-plus"></i>
-							</a>
+			<div class="about-team">
+				<div class="row">   
+					<div class="col-sm-12 col-md-6">
+						<div class="about-team-person text-center">
+							<div >
+                                <center>
+								<img class="img-responsive" src="assets/images/team/miguel.jpg" alt="Team1">
+                                </center>
+							</div>
+							<div class="about-team-person-info">
+								<h3>MIGUEL GARCÍA ALVAREZ</h3>
+								<h4>MANAGER</h4>
+								<p ><i class="fa fa-mobile" aria-hidden="true"></i> Phone: +971 56 494 4632</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>    
+							</div>
 						</div>
-                        </div>
-					</div>';
-                                }
-                                ?>
-
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<div class="about-team-person text-center">
+							<div >
+                                <center>
+								<img class="img-responsive" src="assets/images/team/ileana.jpg" alt="Team1">
+                                </center>
+							</div>
+							<div class="about-team-person-info">
+								<h3>ILEANA TARIN</h3>
+								<h4>LOGISTICS</h4>
+								<p ><i class="fa fa-mobile" aria-hidden="true"></i> Phone: +52 1 33 14465437</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>    
+							</div>
+						</div>
+					</div>
 				</div>
-                </center>
 			</div>
 		</div>
 	</section>
-	<!-- Portfolio End -->
+	<!-- About End -->
 	
 	<!-- Footer Start -->
 	<footer id="footer">
