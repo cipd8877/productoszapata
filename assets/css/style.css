@@ -56,7 +56,7 @@ section .title h2 {background: #000000;color:#b07918;padding: 15px;font-size: 22
 /*#####--- Portfolio CSS Start ---#####*/
 
 #portfolio {padding: 15px 0 30px;}
-#portfolio .portfolio-gallery {margin:0 15px;}
+#portfolio .portfolio-gallery {margin:0 25px;}
 #portfolio .portfolio-gallery .col-sm-3, #portfolio .portfolio-gallery .col-sm-4 {padding: 1px;position: relative;}
 #portfolio .portfolio-gallery .col-sm-4 img {width: 100%;}
 #portfolio .portfolio-gallery .portfolio-gallery-item a {float: left;}

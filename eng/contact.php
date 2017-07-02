@@ -7,15 +7,16 @@
 	<title>Zapata - 100% Mexicano</title>
 	
 	<!-- Needed CSS & Font Files -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/prettyPhoto.css">
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/prettyPhoto.css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/presets/preset1.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/presets/preset1.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
 	.crop{
  float:left;
@@ -32,13 +33,21 @@
  left:-55px;
  clip:rect(20px 290px 200px 20px);/* Agujero rectángulo de medida específica */
  }
+        a{
+text-decoration:none;
+}
+a:hover 
+{
+   text-decoration: none;
+}
 	</style>
     
-    <meta property="og:title" content="Zapata" />
+    
+<meta property="og:title" content="Zapata" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.productoszapata.com.mx/" />
 <meta property="og:image" content="http://www.productoszapata.com.mx/img/logos/zapataB.png" />
-<meta property="og:description" content="Somos una empresa que ofrece productos mexicanos y servicios" />
+<meta property="og:description" content="We are a Mexican company that is committed to offers products and services made in Mexico" />
 </head>
 <body>
 	<!-- Preload Start -->
@@ -61,21 +70,21 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand sr-only" href="index.php">
-						<h1><img class="img-responsive" src="assets/images/logo190x210.png" alt="logo"></h1>
+						<h1><img class="img-responsive" src="../assets/images/logo190x210.png" alt="logo"></h1>
 					</a>                    
 				</div>
 				<div class="header-logo hidden-phone text-center">
 					<h1>
 						<a class="navbar-brand" href="index.php">
-							<img class="img-responsive" src="assets/images/logo190x210.png" alt="logo">
+							<img class="img-responsive" src="../assets/images/logo190x210.png" alt="logo">
 						</a> 
 					</h1>
 				</div>
 				<div class="header-menu collapse navbar-collapse">
 					<ul class="nav navbar-nav">                 
-						<li class="scroll active"><a href="index.php">Productos</a></li>
-						<li class="scroll"><a href="about.php">Equipo</a></li>
-						<li class="scroll"><a href="contact.php">Contacto</a></li>       
+						<li class="scroll active"><a href="index.php">Products</a></li>
+						<li class="scroll"><a href="about.php">Team</a></li>
+						<li class="scroll"><a href="contact.php">Contact</a></li>       
 					</ul>
 				</div>
 			</div>
@@ -83,14 +92,12 @@
 		
 	</header>
 	<!-- Header End -->
-	
-	
 	<!-- Contact Start -->
 	<section id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="title text-center col-sm-12">
-					<h2>Contáctanos</h2>
+					<h2>Contact us</h2>
 				</div>
 			</div>
 			<div class="contact-wrap">
@@ -100,33 +107,33 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<input type="text" id="name" name="name" class="form-control" placeholder="Nombre" required="required">
+										<input type="text" id="name" name="name" class="form-control" placeholder="Name" required="required">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<input type="email" id="email" name="email" class="form-control" placeholder="Correo " required="required">
+										<input type="email" id="email" name="email" class="form-control" placeholder="Email " required="required">
 									</div>
 								</div>
 							</div>
                             <div class="form-group">
-								<input type="text" id="phone" name="phone" class="form-control" placeholder="Teléfono" required="required">
+								<input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" required="required">
 							</div>
 							<div class="form-group">
-								<input type="text" id="subject" name="subject" class="form-control" placeholder="Asunto" required="required">
+								<input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required="required">
 							</div>
 							<div class="form-group">
-								<textarea name="message" id="message" class="form-control" rows="4" placeholder="Mensaje" required="required"></textarea>
+								<textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required="required"></textarea>
 							</div>                        
 							<div class="form-group">
-								<button type="button" id="envia" class="btn btn-primary btn-lg btn-block">Envía Correo</button>
+								<button type="button" id="envia" class="btn btn-primary btn-lg btn-block">Send Email</button>
 							</div>
 						</form>
 					</div>
 					<div class="col-sm-6">
 						<div class="contact-details">
-							<p>Por medio de los siguientes medios podrás contactarnos.</p>
-							<p>Somos una empresa 100% Mexicana que exporta productos representativos tales como artesanías, servicios de Mariachi y ropa.</p>
+							<p>Please, Feel free to contact us </p>
+							<p>We are a Mexican Company.</p>
 							<ul class="address">
 								<li><i class="fa fa-phone"></i> <span> Phone:</span>+971 56 494 4632</li>
                                 <li><i class="fa fa-phone"></i> <span> Phone:</span>+52 1 33 14465437</li>
@@ -141,7 +148,7 @@
 	</section>
 	<!-- Contact End -->
 	
-	<!-- Footer Start -->
+<!-- Footer Start -->
 	<footer id="footer">
 		<div class="footer-top">
 		</div>
@@ -149,8 +156,8 @@
 			<div class="container">
 					<div class="col-sm-6">
                         <div class="row">
-						 <a href="eng/index.php">
-                             <p style="color: white;"><img src="assets/ico/usa.png" style="float: left !important;" class="img-responsive" alt="english" height="25" width="25">english</p>
+						 <a href="../index.php">
+                             <p style="color: white;"><img src="../assets/ico/mexico.png" style="float: left !important;" class="img-responsive" alt="english" height="25" width="25">español</p>
                         </a>
                         </div>
                         <div class="row">
@@ -159,25 +166,26 @@
 					</div>
 					<div class="col-sm-6">
                         <div class="row">
-                            <p class="pull-right"><i class="fa fa-mobile" aria-hidden="true"></i> Teléfono: +971 56 494 4632</p>
+                            <p class="pull-right"><i class="fa fa-mobile" aria-hidden="true"></i> Phone: +971 56 494 4632</p>
                         </div>
                         <div class="row">
-                            <p class="pull-right"><i class="fa fa-mobile" aria-hidden="true"></i> Teléfono: +52 1 33 14465437</p>
+                            <p class="pull-right"><i class="fa fa-mobile" aria-hidden="true"></i> Phone: +52 1 33 14465437</p>
                         </div>
 					</div>
 			</div>
 		</div>
 	</footer>
 	<!-- Footer End -->
-	
+    
 	
 	<!-- Needed jQuery Files -->
+    <!-- Needed jQuery Files -->
 
 <script>
         $(document).ready(function(){
         
         $('#envia').click(function(){
-        $.post("send.php", $("#contactform").serialize(),  function(response) {
+        $.post("../send.php", $("#contactform").serialize(),  function(response) {
         	 
         	 document.getElementById("contactform").reset();
         	 alert(response);
@@ -189,9 +197,9 @@
         
         });
         </script>
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="assets/js/main.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="../assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>

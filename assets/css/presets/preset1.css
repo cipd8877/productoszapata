@@ -1,10 +1,10 @@
-.btn.btn-primary:hover {background-color: #017fb5;}
-.btn:hover {background-color: #027db3;color: #fff;}
-a {color: #3a7e8e;}
-a:focus, a:hover {color: #3a7e8e;opacity: 0.7;text-decoration: underline;}
+.btn.btn-primary:hover {background-color: #d21318;}
+.btn:hover {background-color:#d21318 ;color: #fff;}
+a {color: #d21318;}
+a:focus, a:hover {color: #d21318;opacity: 0.7;text-decoration: underline;}
 
 #header .header-menu.in {background: #333;}
 #header .navbar-default .navbar-nav a:hover, #header .navbar-default .navbar-nav>.active>a:hover, #header .navbar-default .navbar-nav>.active>a {color: #d09119;}
 #beite-home-slider .carousel-fade .carousel-inner .item:after, #portfolio .portfolio-gallery .portfolio-gallery-item:hover:after {background: rgba(208, 145, 25, 0.47);}
-#beite-home-slider .caption .btn-new:hover, #beite-home-slider .left-control:hover, #beite-home-slider .right-control:hover {border-color: #3a7e8e;}
+#beite-home-slider .caption .btn-new:hover, #beite-home-slider .left-control:hover, #beite-home-slider .right-control:hover {border-color: #d21318;}
 #footer {background-color: #ed1b24;}
