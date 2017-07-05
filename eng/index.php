@@ -163,7 +163,7 @@ $conn->close();
     <div align="center">
         <ul class="bxslider">
             <li> 
-                <iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/7p89f3fIfoU" frameborder="0" allowfullscreen></iframe>
+                <iframe  class="embed-responsive-item"  src="https://www.youtube.com/embed/7p89f3fIfoU" frameborder="0" allowfullscreen></iframe>
             </li>
             <li>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/u51QUcYtUek" frameborder="0" allowfullscreen></iframe>
