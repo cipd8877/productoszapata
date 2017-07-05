@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/presets/preset1.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link href="assets/css/jquery.bxslider.css" rel="stylesheet" />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
@@ -159,7 +160,42 @@ $conn->close();
 		</div>
 	</section>
 	<!-- Portfolio End -->
-	
+    <!-- Videos -->
+    <div align="center">
+        <ul class="bxslider">
+            <li> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7p89f3fIfoU" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/u51QUcYtUek" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zlpqrhGcUeE" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PAh0WjZiKGM" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SDZzrforIpE" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/01jB90o27YI" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tNwVqmQKeec" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/b7ts9dmYGfs" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ax6oxrQ8T50" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OjsubuqeW-c" frameborder="0" allowfullscreen></iframe>
+            </li>
+        </ul>
+    </div>
+	<!-- Videos End -->
 	<!-- Footer Start -->
 	<footer id="footer">
 		<div class="footer-top">
@@ -203,5 +239,26 @@ $conn->close();
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="assets/js/main.js" type="text/javascript"></script>
+    <!-- jQuery library -->
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    
+    <!-- bxSlider Javascript file -->
+    <script src="assets/js/jquery.bxslider.js"></script>
+    <script>
+	   $(document).ready(function(){
+		  $('.bxslider').bxSlider({
+			 mode: 'horizontal',
+			 moveSlides: 1,
+			 slideMargin: 10,
+			 infiniteLoop: true,
+			 slideWidth: 660,
+			 minSlides: 1,
+			 maxSlides: 1,
+			 speed: 800,
+                useCSS: false
+		  });
+	   });
+    </script>
+
 </body>
 </html>
